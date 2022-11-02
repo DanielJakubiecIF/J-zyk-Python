@@ -51,7 +51,19 @@ while True:
 
 #3.5
 
+x = 12; row = []
+row.extend("|...." for i in range(x))
+row.append("|\n0")
+row.extend(str(i+1).rjust(5) for i in range(x))
+row.append("\n")
+print("".join(row))
+
 #3.6
+
+x = 4; y = 2
+r1 = "---".join("+" * (x+1)) + "\n"
+r2 = "   ".join("|" * (x+1)) + "\n"
+print(r2.join([r1] * (y+1)))
 
 #3.8
 
@@ -80,7 +92,9 @@ print(union(lst1, lst2))
 
 #3.9
 
-
+S = [[], [4], (1, 2), [3, 4], (5, 6, 7)]
+Y = list(sum(x) for x in S)
+print(Y)
 
 #3.10
 
