@@ -14,14 +14,14 @@ print(ilość)
 2.2
 #Explain the results.
 
-x = 5                         # przypisanie wartości 5 do x
+x = 5                         # assigning value 5 to x
 x == 5 and 3                  # 3; 'True and Anything' returns 'Anything', but not converted to 'bool', 
 x == 4 and 3                  # False; 'False and Anything' returns 'False', 'Anything' is not checked, 
-3 and x == 5                  # True; jedno z nich jest prawdą
-3 and x == 4                  # False; żadne z nich nie jest prawdą
+3 and x == 5                  # True; one of them is true
+3 and x == 4                  # False; none of them is true
 
-isinstance(True, int)         # True; True może być interpretowane jako wartość 1
-isinstance(True, bool)        # True; Booleans reprezentują jedną z dwóch wartości True lub False
+isinstance(True, int)         # True; True can be interpreted as value of 1
+isinstance(True, bool)        # True; Booleans represent one of two: true or false
 
 2.3
 #Find the sum 1*1 + 3*3 + 5*5 + ... + 2021*2021
@@ -77,11 +77,10 @@ print("length_order:", length_order)
 2.6
 #Find and explain the results
 
-t = (2, 4)              #krotka
-print(t[2])             #numeracja zaczyna się od 0 nie od 1
-t.append(6)             #krotka nie ma atrybutu append
-a, b = t ; print(a, b)  #tutaj nie jestem pewien o co chodzi. a i b są sprzęgane z wartościami 2 i 4 w krotce dlatego print(a, b) drukuje 2 i 4
-
+t = (2, 4)              #tuple
+print(t[2])             #indexing begins with 0 not with 1
+t.append(6)             #tuple doesn't have the attribute append
+a, b = t ; print(a, b)  #I am no sure here. a i b are assigned to values 2 and 4 in tuple that's why print(a, b) gives 2 and 4
 2.7
 #Create a dict for conversion of roman numerals/strings (I, IV, V, IX, X, XL, L, XC, C, CD, D, CM, M) to arabic numbers. Use different methods.
 
@@ -99,3 +98,4 @@ D = {}
 for (k, v) in zip(keys, values):
     D[k] = v
 print(D)
+
