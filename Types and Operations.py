@@ -40,10 +40,24 @@ print(suma_listy)
 
 "Daniel" -->  [68, 97, 110, 105, 101, 108]
 
-Prepare the periodic table (ten elements) as a list
-pt = [(1,"Hydrogen","H",1), (2,"Helium","He",4), ...].
-Use pt to print a table (3 right + 20 left + 6 center + 10 right)
+#Prepare the periodic table (ten elements) as a list
+#pt = [(1,"Hydrogen","H",1), (2,"Helium","He",4), ...].
+#Use pt to print a table (3 right + 20 left + 6 center + 10 right)
 
+pt = [(1,"Hydrogen","H",1), (2,"Helium","He",4), (2,"Helium","He",4), (2,"Helium","He",4), (2,"Helium","He",4), (2,"Helium","He",4), (2,"Helium","He",4),(2,"Helium","He",4), (2,"Helium","He",4), (2,"Helium","He",4),]
+
+#print(*pt, sep = "\n")
+
+
+r1 = "+" + "+".join(["---", "--------------------", "------", "----------"]) + "+" + "\n"
+r2 = "|" + "|".join(["No.", "Name (en)".ljust(20), "Symbol", "Weight (u)"]) + "|" + "\n"
+r3 = "|" + "|".join(["1".rjust(3), "Hydrogen".ljust(20), "H".center(6), "1".rjust(10)]) +"|"+ "\n"
+
+
+print(r1, r1.join([r2, r3]), r1)
+
+for (a, b, c, d) in pt:
+    print("| {} | {} | {} | {} |".format(a, b, c, d))
 
 
 2.5
