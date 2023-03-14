@@ -94,7 +94,7 @@ print("length_order:", length_order)
 t = (2, 4)              #tuple
 print(t[2])             #indexing begins with 0 not with 1
 t.append(6)             #tuple doesn't have the attribute append
-a, b = t ; print(a, b)  #I am no sure here. a i b are assigned to values 2 and 4 in tuple that's why print(a, b) gives 2 and 4
+a, b = t ; print(a, b)  #I am no sure here. a and b are assigned to values 2 and 4 in tuple that's why print(a, b) gives 2 and 4
 2.7
 #Create a dict for conversion of roman numerals/strings (I, IV, V, IX, X, XL, L, XC, C, CD, D, CM, M) to arabic numbers. Use different methods.
 
