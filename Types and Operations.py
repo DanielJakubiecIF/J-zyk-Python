@@ -35,6 +35,11 @@ for i in L:
 
 print(suma_listy)
 
+#alternative
+
+result = sum(i*i for i in range(1, 2022, 2))
+print("sum {}".format(result))
+
 2.4
 #(a) Find Unicode code points (int) for all characters of your name
 
@@ -49,15 +54,21 @@ pt = [(1,"Hydrogen","H",1), (2,"Helium","He",4), (2,"Helium","He",4), (2,"Helium
 #print(*pt, sep = "\n")
 
 
-r1 = "+" + "+".join(["---", "--------------------", "------", "----------"]) + "+" + "\n"
-r2 = "|" + "|".join(["No.", "Name (en)".ljust(20), "Symbol", "Weight (u)"]) + "|" + "\n"
+r1 = "+" + "+".join(["---", "--------------------", "------", "----------"]) + "+" 
+r2 = "|" + "|".join(["No.", "Name (en)".ljust(20), "Symbol", "Weight (u)"]) + "|" 
 r3 = "|" + "|".join(["1".rjust(3), "Hydrogen".ljust(20), "H".center(6), "1".rjust(10)]) +"|"+ "\n"
 
+L = [r1, r2, r1]
 
-print(r1, r1.join([r2, r3]), r1)
+for t in pt:
+    L.append("|{}|{}|{}|{}|".format(
+        str(t[0]).rjust(3),
+        t[1].ljust(20),
+        t[2].center(6),
+        str(t[3]).rjust(10)))
 
-for (a, b, c, d) in pt:
-    print("| {} | {} | {} | {} |".format(a, b, c, d))
+L.append(r1)
+print("\n".join(L))
 
 
 2.5
