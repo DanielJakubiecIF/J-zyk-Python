@@ -59,5 +59,21 @@ while (item <= 39):
 #one line for one variable.
 #Print the file content on the screen.
 
+import math
 
+n = 2022
+x = math.pi
+word = "Python"
+polish = "książka"
+
+with open("vars.txt", "w") as outfile:
+    for item in (n, x, word, polish):
+        outfile.write("{}\n".format(item))
+
+print("data saved . . . ")
+
+with open("vars.txt", "r") as infile:
+    print(infile.read())
+    for line in infile:
+        print(line, end=" ")
 
