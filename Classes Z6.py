@@ -30,7 +30,7 @@ class Vector:
         if isinstance(other, Vector):
             return self.x * other.x, self.y * other.y, self.z * other.z
         else:
-            return Vector(self.x * other.x, self.y * other.y, self.z * other.z)
+            return Vector(self.x * other, self.y * other, self.z * other)
     
     __rmul__ = __mul__
 
