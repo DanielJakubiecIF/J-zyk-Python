@@ -28,7 +28,7 @@ class Vector:
     
     def __mul__(self, other):
         if isinstance(other, Vector):
-            return self.x * other.x, self.y * other.y, self.z * other.z
+            return self.x * other.x + self.y * other.y + self.z * other.z
         else:
             return Vector(self.x * other, self.y * other, self.z * other)
     
@@ -51,10 +51,21 @@ w = Vector(2, -3, 2)
 assert v != w
 assert v + w == Vector(3, -1, 5)
 assert v - w == Vector(-1, 5, 1)
-assert v * w == (2, -6, 6)
+assert v * w == (2)
 assert v.cross(w) == Vector(13, 4, -7)
 assert v.length() == math.sqrt(14)
 S = set([v, v, w])
 assert len(S) == 2
 
 print("Tests passed")
+
+def find_axis(v1, v2):
+    v3 = v1.cross(v2)
+    if v3 == Vector(0, 0, 0):
+        raise ValueError("v1 and v2 are parallel")
+    d = v3.length()
+    v3 = v3 * (1.0 / d)
+    return v3
+
+print(find_axis(Vector(2, 0, 0), Vector(0, 2, 0)))
+find_axis(v, v)
