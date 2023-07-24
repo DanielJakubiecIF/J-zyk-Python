@@ -8,10 +8,10 @@ def find_axis(v1, v2):
     if v3 == Vector(0, 0, 0):
         raise ValueError("v1 and v2 are parallel")
     d = v3.length()
-    v3 = v3 * (1.0 / d)
     v3 = v3 / d
     return v3
 
+assert find_axis(Vector(2, 0, 0), Vector(0, 2, 0)) == Vector(0, 0, 1.0)
 
 #Create the following infinite iterators:
 #(a) returning 0, 1, 0, 1, 0, 1, ...,
